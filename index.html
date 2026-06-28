@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 1 Feedback | Student Orientation Programme</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="college-logo-placeholder">CAHCET</div>
+            <h2>C. Abdul Hakeem College of Engineering & Technology</h2>
+            <h3>Department of Information Technology (INFO CLUB)</h3>
+            <p class="event-title">Student Orientation Programme - Day 1 Feedback</p>
+            <p class="event-date">Date: 28/06/2026 | Venue: Tech Tower Seminar Hall</p>
+        </header>
+
+        <form id="feedbackForm" name="google-sheet">
+            <!-- Page 1: Student Details -->
+            <div id="page1">
+                <fieldset>
+                    <legend>Student Details</legend>
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="Name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="rollno">Roll Number *</label>
+                        <input type="text" id="rollno" name="RollNumber" placeholder="Enter roll number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="section">Section *</label>
+                        <select id="section" name="Section" required>
+                            <option value="" disabled selected>Select your section</option>
+                            <option value="A">Section A</option>
+                            <option value="B">Section B</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email ID *</label>
+                        <input type="email" id="email" name="Email" placeholder="username@gmail.com" required>
+                    </div>
+                </fieldset>
+                <div class="button-container">
+                    <button type="button" id="nextBtn">Next</button>
+                </div>
+            </div>
+
+            <!-- Page 2: Feedback Questions -->
+            <div id="page2" style="display:none;">
+                <fieldset>
+                    <legend>Orientation Program Feedback</legend>
+                    
+                    <div class="form-group">
+                        <label>1. How well did the programme meet your expectations?</label>
+                        <select name="Q1_Inaugural" required>
+                            <option value="" disabled selected>Select...</option>
+                            <option value="Excellent">Excellent</option>
+                            <option value="Good">Good</option>
+                            <option value="Average">Average</option>
+                            <option value="Fair">Fair</option>
+                            <option value="Poor">Poor</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>2. Which part of the programme was most beneficial to you?</label>
+                        <select name="Q2_VisionMission" required>
+                            <option value="" disabled selected>Select...</option>
+                            <option value="Department Introduction">Department Introduction</option>
+                            <option value="Academic Guidelines">Academic Guidelines</option>
+                            <option value="Industry Trends Session">Industry Trends Session</option>
+                            <option value="Technical Connection Activity">Technical Connection Activity</option>
+                            <option value="Overall Programme">Overall Programme</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>3. How engaging were the sessions throughout the programme?</label>
+                        <select name="Q3_ChiefGuest" required>
+                            <option value="" disabled selected>Select...</option>
+                            <option value="Highly Engaging">Highly Engaging</option>
+                            <option value="Engaging">Engaging</option>
+                            <option value="Neutral">Neutral</option>
+                            <option value="Less Engaging">Less Engaging</option>
+                            <option value="Not Engaging">Not Engaging</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>4. How informative was the programme?</label>
+                        <select name="Q4_IT_Trends" required>
+                            <option value="" disabled selected>Select...</option>
+                            <option value="Extremely Informative">Extremely Informative</option>
+                            <option value="Very Informative">Very Informative</option>
+                            <option value="Moderately Informative">Moderately Informative</option>
+                            <option value="Slightly Informative">Slightly Informative</option>
+                            <option value="Not Informative">Not Informative</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>5. How would you rate the afternoon "Technical Connection" activity?</label>
+                        <select name="Q5_TechConnection" required>
+                            <option value="" disabled selected>Select...</option>
+                            <option value="Highly Engaging">Highly Engaging</option>
+                            <option value="Somewhat Engaging">Somewhat Engaging</option>
+                            <option value="Not Engaging">Not Engaging</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>6. How would you rate the overall ambiance and seating arrangements at Tech Tower Seminar Hall?</label>
+                        <select name="Q6_Venue" required>
+                            <option value="" disabled selected>Select...</option>
+                            <option value="Excellent">Excellent</option>
+                            <option value="Good">Good</option>
+                            <option value="Average">Average</option>
+                            <option value="Poor">Poor</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>7. Rate the quality of the opportunity provided (Tea Break & Lunch arrangements).</label>
+                        <select name="Q7_Food" required>
+                            <option value="" disabled selected>Select...</option>
+                            <option value="Excellent">Excellent</option>
+                            <option value="Good">Good</option>
+                            <option value="Average">Average</option>
+                            <option value="Poor">Poor</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>8. What was your key takeaway from Day 1 of this orientation? (Short Answer) *</label>
+                        <textarea name="Q8_Takeaway" rows="2" placeholder="Your answer..." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>9. Any specific suggestions for the coordinators to improve Day 2? (Optional)</label>
+                        <textarea name="Q9_Suggestions" rows="2" placeholder="Your suggestions..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>10. Overall Star Rating for Day 1</label>
+                        <div class="star-rating">
+                            <input type="radio" id="star5" name="Q10_StarRating" value="5" required><label for="star5">★</label>
+                            <input type="radio" id="star4" name="Q10_StarRating" value="4"><label for="star4">★</label>
+                            <input type="radio" id="star3" name="Q10_StarRating" value="3"><label for="star3">★</label>
+                            <input type="radio" id="star2" name="Q10_StarRating" value="2"><label for="star2">★</label>
+                            <input type="radio" id="star1" name="Q10_StarRating" value="1"><label for="star1">★</label>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="button-container">
+                    <button type="button" id="prevBtn" class="secondary">Previous</button>
+                    <button type="submit" id="submitBtn">Submit Feedback</button>
+                </div>
+            </div>
+        </form>
+        <!-- Page 3: Success Message -->
+        <div id="successPage" style="display:none; text-align: center; padding: 40px 20px;">
+            <h2 style="color: #14aa9c; font-size: 28px; margin-bottom: 15px;">Thank You!</h2>
+            <p style="font-size: 18px; color: #34495e;">Your feedback has been submitted successfully.</p>
+            <p style="font-size: 16px; color: #34495e; margin-top: 10px;">We look forward to seeing you at the Day 2 event!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

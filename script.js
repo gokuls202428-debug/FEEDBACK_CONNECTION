@@ -46,6 +46,31 @@ prevBtn.addEventListener('click', () => {
 
 form.addEventListener('submit', e => {
     e.preventDefault();
+
+    // --- Validate fields on Page 2 before submitting ---
+    const inputs = page2.querySelectorAll('input[required], select[required], textarea[required]');
+    let isValid = true;
+    inputs.forEach(input => {
+        // For radio buttons, check if one in the group is checked
+        if (input.type === 'radio') {
+            const radioGroup = form.querySelectorAll(`input[name="${input.name}"]`);
+            if (![...radioGroup].some(r => r.checked)) {
+                isValid = false;
+                // Optionally, highlight the container or label for radio groups
+                input.closest('.form-group').style.border = '1px solid red';
+            }
+        } else if (!input.value) {
+            isValid = false;
+            input.style.borderColor = 'red'; // Highlight empty required fields
+        }
+    });
+
+    if (!isValid) {
+        alert('Please fill out all required fields on this page.');
+        return; // Stop the submission
+    }
+    // --- End of validation ---
+
     submitBtn.innerText = "Submitting Feedback...";
     submitBtn.disabled = true;
     prevBtn.disabled = true;

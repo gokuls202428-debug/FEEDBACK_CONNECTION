@@ -13,7 +13,7 @@
             <h2>C. Abdul Hakeem College of Engineering & Technology</h2>
             <h3>Department of Information Technology (INFO CLUB)</h3>
             <p class="event-title">Student Orientation Programme - Day 2 Feedback</p>
-            <p class="event-date">Date: 30/06/2026 </p>
+            <p class="event-date">Date: 30/06/2026 | Venue: Tech Tower Seminar Hall</p>
         </header>
 
         <form id="feedbackForm" name="google-sheet">
@@ -53,11 +53,11 @@
                     <legend>Orientation Program Feedback</legend>
                     
                     <div class="form-group">
-                        <label>1. How well did the programme meet your expectations?</label>
+                        <label>1. How well did today's events meet your expectations?</label>
                         <select name="Q1_Inaugural" required>
                             <option value="" disabled selected>Select...</option>
-                            <option value="Excellent">Excellent</option>
-                            <option value="Good">Good</option>
+                            <option value="Exceeded Expectations">Exceeded Expectations</option>
+                            <option value="Met Expectations">Met Expectations</option>
                             <option value="Average">Average</option>
                             <option value="Fair">Fair</option>
                             <option value="Poor">Poor</option>
@@ -65,54 +65,44 @@
                     </div>
 
                     <div class="form-group">
-                        <label>2. Which part of the programme was most beneficial to you?</label>
+                        <label>2. Which activity did you enjoy the most today?</label>
                         <select name="Q2_VisionMission" required>
                             <option value="" disabled selected>Select...</option>
-                            <option value="Department Introduction">TECH DRAW</option>
-                            <option value="Academic Guidelines"></option>
-                            <option value="Industry Trends Session">Industry Trends Session</option>
-                            <option value="Technical Connection Activity">Technical Connection Activity</option>
-                            <option value="Overall Programme">Overall Programme</option>
+                            <option value="Tech Draw">Tech Draw (Morning)</option>
+                            <option value="Guest Lecture">Guest Lecture</option>
+                            <option value="Treasure Hunt">Treasure Hunt (Afternoon)</option>
+                            <option value="Guess the Logo/10-Min Startup">Guess the Logo / 10-Min Startup</option>
+                            <option value="All were equally good">All were equally good</option>
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <label>3. How engaging were the sessions throughout the programme?</label>
+                        <label>3. How creative and engaging was the morning "Tech Draw" activity?</label>
                         <select name="Q3_ChiefGuest" required>
                             <option value="" disabled selected>Select...</option>
-                            <option value="Highly Engaging">Highly Engaging</option>
-                            <option value="Engaging">Engaging</option>
+                            <option value="Highly Creative & Engaging">Highly Creative & Engaging</option>
+                            <option value="Creative & Engaging">Creative & Engaging</option>
                             <option value="Neutral">Neutral</option>
-                            <option value="Less Engaging">Less Engaging</option>
-                            <option value="Not Engaging">Not Engaging</option>
+                            <option value="Slightly Engaging">Slightly Engaging</option>
+                            <option value="Not Engaging">Not at all</option>
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <label>4. How informative was the programme?</label>
+                        <label>4. How informative and valuable was the Guest Lecture?</label>
                         <select name="Q4_IT_Trends" required>
                             <option value="" disabled selected>Select...</option>
-                            <option value="Extremely Informative">Extremely Informative</option>
-                            <option value="Very Informative">Very Informative</option>
-                            <option value="Moderately Informative">Moderately Informative</option>
-                            <option value="Slightly Informative">Slightly Informative</option>
-                            <option value="Not Informative">Not Informative</option>
+                            <option value="Extremely Valuable">Extremely Valuable</option>
+                            <option value="Very Valuable">Very Valuable</option>
+                            <option value="Moderately Valuable">Moderately Valuable</option>
+                            <option value="Slightly Valuable">Slightly Valuable</option>
+                            <option value="Not Valuable">Not Valuable</option>
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <label>5. How would you rate the afternoon " TREATURE HUNT" activity?</label>
+                        <label>5. How would you rate the excitement and coordination of the afternoon "Treasure Hunt"?</label>
                         <select name="Q5_TechConnection" required>
-                            <option value="" disabled selected>Select...</option>
-                            <option value="Highly Engaging">Highly Engaging</option>
-                            <option value="Somewhat Engaging">Somewhat Engaging</option>
-                            <option value="Not Engaging">Not Engaging</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label>6. How would you rate the overall ambiance and seating arrangements ?</label>
-                        <select name="Q6_Venue" required>
                             <option value="" disabled selected>Select...</option>
                             <option value="Excellent">Excellent</option>
                             <option value="Good">Good</option>
@@ -122,7 +112,18 @@
                     </div>
 
                     <div class="form-group">
-                        <label>7. Rate the quality of the opportunity provided .</label>
+                        <label>6. How engaging were the "Guess the Logo" and "10-Minute Startup" events?</label>
+                        <select name="Q6_Venue" required>
+                            <option value="" disabled selected>Select...</option>
+                            <option value="Very Engaging">Very Engaging</option>
+                            <option value="Moderately Engaging">Moderately Engaging</option>
+                            <option value="Slightly Engaging">Slightly Engaging</option>
+                            <option value="Not Engaging">Not Engaging</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>7. Rate the overall quality of the venue, tea break, and lunch arrangements.</label>
                         <select name="Q7_Food" required>
                             <option value="" disabled selected>Select...</option>
                             <option value="Excellent">Excellent</option>
@@ -133,17 +134,17 @@
                     </div>
 
                     <div class="form-group">
-                        <label>8. What was your key takeaway from Day 2 of this orientation? (Short Answer) *</label>
+                        <label>8. What was your key takeaway from today's guest lecture or activities? *</label>
                         <textarea name="Q8_Takeaway" rows="2" placeholder="Your answer..." required></textarea>
                     </div>
 
                     <div class="form-group">
-                        <label>9. Any specific suggestions? (Optional)</label>
+                        <label>9. What activities would you like the Info Club to organize next? (Optional)</label>
                         <textarea name="Q9_Suggestions" rows="2" placeholder="Your suggestions..."></textarea>
                     </div>
 
                     <div class="form-group">
-                        <label>10. Overall Star Rating for Day 1</label>
+                        <label>10. Overall Star Rating for today's events</label>
                         <div class="star-rating">
                             <input type="radio" id="star5" name="Q10_StarRating" value="5" required><label for="star5">★</label>
                             <input type="radio" id="star4" name="Q10_StarRating" value="4"><label for="star4">★</label>
